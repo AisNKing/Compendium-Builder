@@ -35,6 +35,16 @@
 </script>
 
 
-<?php 
 
+<?php 
+    //add bestiary
+    //edit bestiary
+    
+    //add beast
+    //edit beast - inc add location and card
+    //add location
+    //edit location
+    //add card
+    //edit card
+    
 ?>
