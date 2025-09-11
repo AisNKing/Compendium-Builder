@@ -19,6 +19,18 @@
         echo '</br>';
         echo '</br>';
         echo 'Location: ' . $row['location2'];
+        
+        echo '</br>';
+        echo '</br>';
+        echo '</br>';
+        echo '</br>';
+        echo '<a href = index.php?page=EditBeast&id=' . $row['id'] . '>Edit</a>';
+        echo '</br>';
+        echo '</br>';
+        echo '<a href = index.php?page=TagLocation&id=' . $row['id'] . '>Add Locations</a>';
+        echo '</br>';
+        echo '</br>';
+        echo '<a href = index.php?page=TagCard&id=' . $row['id'] . '>Add Abilities</a>';
     }
     
 ?>
