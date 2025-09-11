@@ -39,6 +39,20 @@
 <?php 
     //add bestiary
     //edit bestiary
+    //export bestiary
+    //view bestiary
+    if(isset($_GET["page"]) && $_GET["page"] == "AddBeastiary"){
+        include 'bestiary/bestiary_add.php';
+    }
+    if(isset($_GET["page"]) && $_GET["page"] == "EditBeastiary"){
+        include 'bestiary/bestiary_edit.php';
+    }
+    if(isset($_GET["page"]) && $_GET["page"] == "ExportBeastiary"){
+        include 'bestiary/bestiary_export.php';
+    }
+    if(isset($_GET["page"]) && $_GET["page"] == "ViewBeastiary"){
+        include 'bestiary/bestiary_view.php';
+    }
     
     //add beast
     //edit beast - inc add location and card
