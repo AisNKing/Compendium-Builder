@@ -48,7 +48,10 @@
         include 'card/card_add.php';
     }
     //edit card
+    else if(isset($_GET["page"]) && $_GET["page"] == "EditAbilities"){
+        include 'card/card_edit.php';
+    }
     else {
-        echo '<a href="index.php?page=AddBestiary">Add Bestiary</a>';
+        echo '<a href="index.php?page=AddBestiary">Bestiaries</a>';
     }
 ?>

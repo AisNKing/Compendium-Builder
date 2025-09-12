@@ -39,10 +39,12 @@
     const output = JSON.stringify(obj);
     console.log(output);
 </script>
-<?php 
 
+<?php 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $mysqli = new mysqli("localhost:3306", "root", "", "bestiary");
+
+    $bestiaryID = $_GET["bestiaryID"];
 
     if(isset($_POST["bestiaryID"])){
         $name = $_POST["name"];
@@ -57,12 +59,11 @@
     }
 
     $mysqli->real_query(
-        "SELECT * FROM beasts");
+        "SELECT * FROM beasts WHERE bestiaryID = $bestiaryID");
 
     $blist = $mysqli->use_result();
 
     foreach ($blist as $row) {
         echo '</br><a href = index.php?page=ViewBeast&id=' . $row['id'] . '>' . $row['name'] . '</a>';
     }
-
 ?>
