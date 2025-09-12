@@ -11,6 +11,14 @@
 
     $blist = $mysqli->use_result();
 
+    $mysqli2 = new mysqli("localhost:3306", "root", "", "bestiary");
+
+
+    $mysqli2->real_query(
+        "SELECT * FROM cards c WHERE c.id IN (SELECT bhc.cardID FROM beasthascard bhc WHERE bhc.beastID = '$id' AND bhc.active = 1)");
+
+    $alist = $mysqli2->use_result();
+
     foreach ($blist as $row) {
         echo $row['name'];
         echo '</br>';
@@ -19,6 +27,13 @@
         echo '</br>';
         echo '</br>';
         echo 'Location: ' . $row['location2'];
+        echo '</br>';
+        echo '</br>';
+        echo 'Abilities: ';
+        
+        foreach($alist as $ab){
+            echo ' -' . $ab['name'];
+        }
         
         echo '</br>';
         echo '</br>';

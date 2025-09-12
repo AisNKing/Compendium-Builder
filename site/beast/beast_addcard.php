@@ -3,6 +3,8 @@ Add Abilities
 <?php 
     
     $beastID = $_GET["id"];
+
+    echo '<br><a href="index.php?page=ViewBeast&id=' . $beastID . '">Back</a>';
     if(isset($_POST["formSubmit"])){
         //echo $_POST . '';
         
