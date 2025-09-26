@@ -50,12 +50,13 @@
         $name = $_POST["name"];
         $description = $_POST["description"];
         $image = $_POST["image"];
+        $location2 = $_POST["location1"];
         $location2 = $_POST["location2"];
         $bestiaryID = $_POST["bestiaryID"];
         
         $mysqli->real_query(
-            "INSERT INTO beasts (name, description, image, location2, bestiaryID, active)
-            VALUES ('$name', '$description', '$image', '$location2', '$bestiaryID', 1)");
+            "INSERT INTO beasts (name, description, image, location1, location2, bestiaryID, active)
+            VALUES ('$name', '$description', '$image', '$location1', '$location2', '$bestiaryID', 1)");
     }
 
     $mysqli->real_query(
