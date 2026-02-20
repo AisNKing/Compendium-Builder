@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2025 at 02:17 AM
+-- Generation Time: Feb 20, 2026 at 11:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -34,32 +34,6 @@ CREATE TABLE `beasthascard` (
   `active` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `beasthascard`
---
-
-INSERT INTO `beasthascard` (`id`, `beastID`, `cardID`, `active`) VALUES
-(1, 2, 1, 0),
-(2, 2, 1, 0),
-(3, 2, 1, 0),
-(4, 2, 2, 0),
-(5, 2, 1, 0),
-(6, 2, 2, 0),
-(7, 2, 2, 0),
-(8, 2, 1, 0),
-(9, 2, 2, 0),
-(10, 2, 1, 0),
-(11, 2, 2, 0),
-(12, 2, 1, 0),
-(13, 2, 2, 0),
-(14, 2, 1, 0),
-(15, 2, 1, 0),
-(16, 2, 2, 0),
-(17, 2, 2, 0),
-(18, 2, 1, 0),
-(19, 2, 2, 0),
-(20, 2, 2, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -87,15 +61,9 @@ CREATE TABLE `beasts` (
   `location1` varchar(511) NOT NULL,
   `location2` mediumtext NOT NULL,
   `bestiaryID` int(11) NOT NULL,
-  `active` int(11) NOT NULL
+  `active` int(11) NOT NULL,
+  `abilities` varchar(2047) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `beasts`
---
-
-INSERT INTO `beasts` (`id`, `name`, `description`, `image`, `location1`, `location2`, `bestiaryID`, `active`) VALUES
-(2, 'Junkyard Scrapper', 'Lives in junkyards, likes to scrap', 'Junkyard_Scrapper.png', '', 'Junkyards', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -108,14 +76,6 @@ CREATE TABLE `bestiary` (
   `name` varchar(255) NOT NULL,
   `active` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `bestiary`
---
-
-INSERT INTO `bestiary` (`id`, `name`, `active`) VALUES
-(1, 'Renegade Run', 1),
-(2, '', 1);
 
 -- --------------------------------------------------------
 
@@ -132,14 +92,6 @@ CREATE TABLE `cards` (
   `bestiaryID` int(11) NOT NULL,
   `active` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `cards`
---
-
-INSERT INTO `cards` (`id`, `name`, `type`, `color`, `description`, `bestiaryID`, `active`) VALUES
-(1, 'Lunar Turret', 3, 1, 'Deals 1 phasing damage to all enemies at the end of your turn.', 1, 1),
-(2, 'Echoing Aegis', 5, 1, 'Whenever you gain shields, deal 1 phasing damage to a random enemy.', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -226,7 +178,7 @@ ALTER TABLE `locations`
 -- AUTO_INCREMENT for table `beasthascard`
 --
 ALTER TABLE `beasthascard`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `beasthaslocation`
@@ -238,19 +190,19 @@ ALTER TABLE `beasthaslocation`
 -- AUTO_INCREMENT for table `beasts`
 --
 ALTER TABLE `beasts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `bestiary`
 --
 ALTER TABLE `bestiary`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cards`
 --
 ALTER TABLE `cards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `images`
