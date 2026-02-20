@@ -29,7 +29,7 @@
         echo 'Location: ' . $row['location2'];
         echo '</br>';
         echo '</br>';
-        echo 'Abilities: ';
+        echo 'Abilities: '.  $row['abilities'];
         
         foreach($alist as $ab){
             echo ' -' . $ab['name'];

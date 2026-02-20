@@ -12,7 +12,7 @@
         <p>Location (user)</p>
         <input id="location2" name="location2" type="text" style=""></input>
         <p>Abilities</p>
-        <input id="abilities" name="abilities" type="text" style=""></input>
+        <textarea id="abilities" name="abilities" type="text" style=""></textarea>
         <p>Stats</p>
         <input id="stats" name="stats" type="text" style=""></input>
         <?php 
@@ -50,13 +50,14 @@
         $name = $_POST["name"];
         $description = $_POST["description"];
         $image = $_POST["image"];
-        $location2 = $_POST["location1"];
+        $location1 = $_POST["location1"];
         $location2 = $_POST["location2"];
         $bestiaryID = $_POST["bestiaryID"];
+        $abilities = $_POST["abilities"];
         
         $mysqli->real_query(
-            "INSERT INTO beasts (name, description, image, location1, location2, bestiaryID, active)
-            VALUES ('$name', '$description', '$image', '$location1', '$location2', '$bestiaryID', 1)");
+            "INSERT INTO beasts (name, description, image, location1, location2, bestiaryID, active, abilities)
+            VALUES ('$name', '$description', '$image', '$location1', '$location2', '$bestiaryID', 1, '$abilities')");
     }
 
     $mysqli->real_query(
