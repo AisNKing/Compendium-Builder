@@ -54,10 +54,11 @@
         $location2 = $_POST["location2"];
         $bestiaryID = $_POST["bestiaryID"];
         $abilities = $_POST["abilities"];
+        $stats = $_POST["stats"];
         
         $mysqli->real_query(
-            "INSERT INTO beasts (name, description, image, location1, location2, bestiaryID, active, abilities)
-            VALUES ('$name', '$description', '$image', '$location1', '$location2', '$bestiaryID', 1, '$abilities')");
+            "INSERT INTO beasts (name, description, image, location1, location2, bestiaryID, active, abilities, stats)
+            VALUES ('$name', '$description', '$image', '$location1', '$location2', '$bestiaryID', 1, '$abilities', '$stats')");
     }
 
     $mysqli->real_query(
