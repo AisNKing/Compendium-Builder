@@ -30,6 +30,9 @@
         echo '</br>';
         echo '</br>';
         echo 'Abilities: '.  $row['abilities'];
+        echo '</br>';
+        echo '</br>';
+        echo 'Stats: '.  $row['stats'];
         
         foreach($alist as $ab){
             echo ' -' . $ab['name'];
