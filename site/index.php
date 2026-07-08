@@ -3,6 +3,8 @@
 <br />
 <br />
 
+<link rel="stylesheet" href="style.css">
+
 <?php 
     //add bestiary
     //edit bestiary
