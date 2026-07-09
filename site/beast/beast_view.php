@@ -37,18 +37,12 @@
         foreach($alist as $ab){
             echo ' -' . $ab['name'];
         }
-        
-        echo '</br>';
-        echo '</br>';
         echo '</br>';
         echo '</br>';
         echo '<a href = index.php?page=EditBeast&id=' . $row['id'] . '>Edit</a>';
         echo '</br>';
         echo '</br>';
-        echo '<a href = index.php?page=TagLocation&id=' . $row['id'] . '>Add Locations</a>';
-        echo '</br>';
-        echo '</br>';
-        echo '<a href = index.php?page=TagCard&id=' . $row['id'] . '>Add Abilities</a>';
+        echo '<a href="index.php?page=AddBeast&bestiaryID='. $row['bestiaryID'] .'">Back to Add / View Beast</a>';
     }
     
 ?>

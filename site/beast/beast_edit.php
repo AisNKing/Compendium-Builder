@@ -51,6 +51,8 @@
                 echo '<button id="btnSave">Save</button>';
             echo '</fieldset>';
         echo '</form>';
+
+        echo '<a href="index.php?page=AddBeast&bestiaryID='. $row['bestiaryID'] .'">Back to Add / View Beast</a>';
     }
 
 ?>
